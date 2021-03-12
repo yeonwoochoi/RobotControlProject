@@ -1,0 +1,6 @@
+C:\Users\최연우\RobotControlProject\RobotControlProject\RobotControlProject\bin\Debug\RobotControlProject.exe
+C:\Users\최연우\RobotControlProject\RobotControlProject\RobotControlProject\bin\Debug\RobotControlProject.pdb
+C:\Users\최연우\RobotControlProject\RobotControlProject\RobotControlProject\obj\Debug\RobotControlProject.csprojAssemblyReference.cache
+C:\Users\최연우\RobotControlProject\RobotControlProject\RobotControlProject\obj\Debug\RobotControlProject.csproj.CoreCompileInputs.cache
+C:\Users\최연우\RobotControlProject\RobotControlProject\RobotControlProject\obj\Debug\RobotControlProject.exe
+C:\Users\최연우\RobotControlProject\RobotControlProject\RobotControlProject\obj\Debug\RobotControlProject.pdb
