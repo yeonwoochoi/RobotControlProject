@@ -2,32 +2,27 @@
 {
     public class CleaningRobot: Robot
     {
-        private int cleaningPower;
+        private int CleaningPower { get; }
 
 
         public string CleaningStart()
         {
-            return $"Cleaning Power {cleaningPower}으로 청소를 시작했습니다.";
+            return $"Cleaning Power {CleaningPower}으로 청소를 시작했습니다.";
         }
 
         public string CleaningDown()
         {
-            return $"Cleaning Power {cleaningPower}으로 청소를 멈추었습니다.";
+            return $"Cleaning Power {CleaningPower}으로 청소를 멈추었습니다.";
         }
 
         public override string ToString()
         {
-            return $"{index}\tCleaning Robot\t{model}\t{x}\t{y}\t{price}\t{distance}\tCleaning Power = {cleaningPower}";
+            return $"{Index}\tDog Robot\t{Model}\t{X}\t{Y}\t{Price}\t{Distance}\tCleaning Power = {CleaningPower}";
         }
 
-        public CleaningRobot(string name, int x, int y, int price, int distance, int cleaningPower)
+        public CleaningRobot(int index, string name, int price, int x = 30, int y = 30, int distance = 3, int cleaningPower = 10): base (index, name, x, y, price, distance)
         {
-            base.model = name;
-            base.x = x;
-            base.y = y;
-            base.price = price;
-            base.distance = distance;
-            this.cleaningPower = cleaningPower;
+            CleaningPower = cleaningPower;
         }
         
     }

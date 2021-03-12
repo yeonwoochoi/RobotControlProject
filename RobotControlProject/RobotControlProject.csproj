@@ -38,12 +38,13 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Control\RobotControls.cs" />
+        <Compile Include="Control\RobotController.cs" />
         <Compile Include="Domain\CleaningRobot.cs" />
         <Compile Include="Domain\DogRobot.cs" />
         <Compile Include="Domain\Robot.cs" />
         <Compile Include="Main\Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Util\ConsoleUtils.cs" />
         <Compile Include="Util\Utils.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

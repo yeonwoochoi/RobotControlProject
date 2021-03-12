@@ -2,70 +2,78 @@
 {
     public abstract class Robot
     {
-        public int index = -1;
-        public string model;
-        public int x;
-        public int y;
-        public int distance;
-        public int price;
+        public int Index { get; }
+        public string Model { get; }
+        protected int X { get; private set; }
+        protected int Y { get; private set; }
+        protected int Distance { get; }
+        public int Price { get; }
 
-        public abstract string ToString();
-
+        protected Robot(int index, string model, int x, int y, int price, int distance = 5)
+        {
+            Index = index;
+            Model = model;
+            X = x;
+            Y = y;
+            Distance = distance;
+            Price = price;
+        }
+        
         public int[] Move(int direction, int roomWidthSize, int roomVerticalSize)
         {
-            int beforeMoveX = x;
-            int beforeMoveY = y;
+            var beforeMoveX = X;
+            var beforeMoveY = Y;
 
             switch (direction)
             {
                 case 1:
                     // Move toward top
-                    if ( y + distance > roomVerticalSize )
+                    if ( Y + Distance > roomVerticalSize )
                     {
-                        y = roomVerticalSize;
+                        Y = roomVerticalSize;
                     }
                     else
                     {
-                        y += distance;
+                        Y += Distance;
                     }
                     break;
                 case 2:
                     // Move toward bottom
-                    if (y - distance < 1)
+                    if (Y - Distance < 1)
                     {
-                        y = 1;
+                        Y = 1;
                     }
                     else
                     {
-                        y -= distance;
+                        Y -= Distance;
                     }
                     break;
                 case 3:
                     // Move toward left
-                    if (x - distance < 1)
+                    if (X - Distance < 1)
                     {
-                        x = 1;
+                        X = 1;
                     }
                     else
                     {
-                        x -= distance;
+                        X -= Distance;
                     }
                     break;
                 case 4:
                     // Move toward right
-                    if (x + distance > roomWidthSize)
+                    if (X + Distance > roomWidthSize)
                     {
-                        x = roomWidthSize;
+                        X = roomWidthSize;
                     }
                     else
                     {
-                        x += distance;
+                        X += Distance;
                     }
                     break;
                 default:
                     break;
             }
-            return new[] {beforeMoveX, beforeMoveY, x, y};
+            return new[] {beforeMoveX, beforeMoveY, X, Y};
         }
 
     }
